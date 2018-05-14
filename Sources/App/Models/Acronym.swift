@@ -6,7 +6,7 @@
 //
 
 import Vapor
-import FluentSQLite
+import FluentPostgreSQL
 
 final class Acronym: Codable {
     var id: Int?
@@ -19,13 +19,7 @@ final class Acronym: Codable {
     }
 }
 
-//extension Acronym: Model {
-//    typealias Database = SQLiteDatabase
-//    typealias ID = Int
-//    public static var idKey: IDKey = \Acronym.id
-//}
-
-extension Acronym: SQLiteModel {}
+extension Acronym: PostgreSQLModel {}
 
 extension Acronym: Migration {}
 

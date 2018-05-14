@@ -13,4 +13,9 @@ final class AcronymController {
             return acronym.save(on: req)
         }
     }
+    
+    func get(_ req: Request) throws -> Future<[Acronym]> {
+        return Acronym.query(on: req).all()
+    }
+
 }
