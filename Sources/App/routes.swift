@@ -45,4 +45,8 @@ public func routes(_ router: Router) throws {
     /// Acronyms
     let acronymsController = AcronymsController()
     try router.register(collection: acronymsController)
+    
+    /// Users
+    let usersController = UsersController()
+    try router.register(collection: usersController)
 }
