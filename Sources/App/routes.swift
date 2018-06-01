@@ -25,13 +25,13 @@ public func routes(_ router: Router) throws {
         }
     }
     
-    router.post(InfoData.self, at: "info") { (req, data) -> String in
-        return "Hello \(data.name)"
-    }
-    
-    router.post(InfoData.self, at: "info") { req, data -> InfoResponse in
-        return InfoResponse(request: data)
-    }
+//    router.post(InfoData.self, at: "info") { (req, data) -> String in
+//        return "Hello \(data.name)"
+//    }
+//    
+//    router.post(InfoData.self, at: "info") { req, data -> InfoResponse in
+//        return InfoResponse(request: data)
+//    }
     
     router.get("view") { req -> Future<View> in
         return try req.view().render("welcome")

@@ -21,4 +21,5 @@
         <h2>There aren't any users yet!</h2>
     }
 }
+
 #embed("base")
